@@ -1,0 +1,14 @@
+resolver: lts-15.5
+
+packages:
+- .
+
+extra-deps:
+- git: git://github.com/hasktorch/hasktorch.git
+  commit: 221226c250c09492a7c224af80a6705feddc0702
+  subdirs:
+    - libtorch-ffi-helper
+    - libtorch-ffi
+    - hasktorch
+nix:
+  shell-file: nix/stack-shell.nix
